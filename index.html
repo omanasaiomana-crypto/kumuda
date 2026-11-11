@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA MED | The Transformation Journey</title>
+  <meta name="description" content="Witness the cinematic journey of a medical aspirant transforming into a healer. An interactive frame-by-frame scroll experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader" role="status" aria-live="polite">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <svg viewBox="0 0 40 40" class="pulse-icon" fill="none" stroke="currentColor">
+          <circle cx="20" cy="20" r="18" stroke="rgba(56, 189, 248, 0.2)" stroke-width="2"/>
+          <path d="M6 20h6l3-7 5 14 4-9 3 4h7" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">AURA<span>MED</span></span>
+      </div>
+      <div class="preloader-status">
+        <div class="preloader-progress-track">
+          <div id="preloader-bar" class="preloader-progress-fill"></div>
+        </div>
+        <div class="preloader-meta">
+          <span id="preloader-text">Initializing 300 Cinematic Frames...</span>
+          <span id="preloader-percent">0%</span>
+        </div>
+      </div>
+      <p class="preloader-hint">Scroll down to witness the transformation</p>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero-section" class="nav-brand">
+        <svg viewBox="0 0 40 40" class="brand-pulse-icon" fill="none" stroke="currentColor">
+          <circle cx="20" cy="20" r="18" stroke="rgba(56, 189, 248, 0.25)" stroke-width="2"/>
+          <path d="M6 20h6l3-7 5 14 4-9 3 4h7" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">AURA<span class="accent">MED</span></span>
+      </a>
+
+      <!-- Smooth Navigation Anchors to All Sections -->
+      <nav class="nav-links">
+        <a href="#hero-section" class="nav-link active">Transformation</a>
+        <a href="#tribute-intro" class="nav-link">The Story</a>
+        <a href="#timeline-journey" class="nav-link">Timeline</a>
+        <a href="#upload-memory-vault" class="nav-link">Upload Photo</a>
+        <a href="#friendship-vault" class="nav-link">Memory Vault</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Clarity Controls -->
+
+        <button id="clarity-boost-btn" class="icon-btn active" aria-label="Toggle HD Clarity Sharpness" title="Toggle HD Clarity Sharpness Boost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </button>
+
+        <button id="focus-btn" class="icon-btn" aria-label="Toggle Clean View" title="Toggle Clean View (Unobstructed Fullscreen Video)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+
+        <button id="fit-btn" class="icon-btn" aria-label="Toggle Fill vs Contain" title="Toggle Aspect Ratio: Full Screen Fill vs 100% Crisp Contain">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+          </svg>
+        </button>
+
+        <button id="sound-btn" class="icon-btn" aria-label="Toggle Sound Effects" title="Toggle Sound FX">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-speaker">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" class="sound-waves"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: Scroll-Bound Image Sequence & Ultra-HD Video Stage -->
+    <section id="hero-section" class="hero-scroll-track" aria-label="Cinematic Transformation Hero">
+      <div class="hero-sticky-stage" id="sticky-stage">
+        
+        <!-- Native Hardware-Accelerated 1080p Ultra-HD Video -->
+        <video id="hero-video" class="hero-media active clarity-boost" src="video.mp4" playsinline webkit-playsinline muted loop preload="auto"></video>
+
+        <!-- Canvas for scroll-bound frame sequence fallback -->
+        <canvas id="hero-canvas" class="hero-media clarity-boost" width="1280" height="720"></canvas>
+
+        <!-- Crystal Clean Ambient Lighting (subtle & non-obstructive) -->
+        <div class="stage-overlay stage-vignette"></div>
+        <div class="stage-overlay stage-glow"></div>
+
+        <!-- Scroll-Synchronized Dynamic Story Captions -->
+        <div class="story-overlay-container">
+          
+          <!-- Phase 1: 0% - 24% -->
+          <article class="story-card active" data-phase="1" id="story-phase-1">
+            <div class="story-badge">
+              <span class="badge-dot"></span>
+              <span>PHASE 01 &mdash; THE AWAKENING</span>
+            </div>
+            <h1 class="story-title">Every Healer's Journey Begins With A Sacred Dream</h1>
+            <p class="story-desc">
+              Before the stethoscope and the white coat, there was quiet grit, an unyielding thirst for knowledge, and a resolve to make a difference in countless lives.
+            </p>
+            <div class="story-metric">
+              <div class="metric-item">
+                <span class="metric-num">1.8M+</span>
+                <span class="metric-lbl">Aspirants Inspired</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-num">300</span>
+                <span class="metric-lbl">Frames of Resolve</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 2: 25% - 52% -->
+          <article class="story-card" data-phase="2" id="story-phase-2">
+            <div class="story-badge">
+              <span class="badge-dot"></span>
+              <span>PHASE 02 &mdash; THE CRUCIBLE</span>
+            </div>
+            <h2 class="story-title">Thousands of Late Hours. Precision Built In Silence.</h2>
+            <p class="story-desc">
+              Mastering human biology, memorizing pharmacological cascades, and relentless diagnostic rigor. Here, devotion sharpens intellect into an instrument of precision.
+            </p>
+            <div class="story-metric">
+              <div class="metric-item">
+                <span class="metric-num">2,400+</span>
+                <span class="metric-lbl">Study Hours</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-num">99.8%</span>
+                <span class="metric-lbl">Diagnostic Precision</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 3: 53% - 77% -->
+          <article class="story-card" data-phase="3" id="story-phase-3">
+            <div class="story-badge">
+              <span class="badge-dot"></span>
+              <span>PHASE 03 &mdash; THE METAMORPHOSIS</span>
+            </div>
+            <h2 class="story-title">When Knowledge Crystallizes Into Pure Clinical Instinct</h2>
+            <p class="story-desc">
+              Light swirls around dedication. The boundary between student and physician dissolves as theoretical mastery sparks into real-world bedside capability.
+            </p>
+            <div class="story-metric">
+              <div class="metric-item">
+                <span class="metric-num">100%</span>
+                <span class="metric-lbl">Clinical Simulation</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-num">Top 1%</span>
+                <span class="metric-lbl">Residency Match</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 4: 78% - 100% -->
+          <article class="story-card" data-phase="4" id="story-phase-4">
+            <div class="story-badge">
+              <span class="badge-dot"></span>
+              <span>PHASE 04 &mdash; THE HEALER EMERGES</span>
+            </div>
+            <h2 class="story-title">A Doctor is Born. Ready To Safeguard Humanity.</h2>
+            <p class="story-desc">
+              The white coat is not just a garment—it is a covenant of empathy, courage, and excellence. Welcome to the world of medical leaders.
+            </p>
+            <div class="story-cta-group">
+              <button id="replay-btn" class="cta-pill primary">&uarr; Replay Transformation</button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Sticky Stage HUD Controls -->
+        <div class="hero-hud">
+          <div class="hud-left">
+            <div class="frame-counter">
+              <span class="hud-label">CINEMATIC FRAME</span>
+              <span class="hud-value" id="hud-frame-num">001 <span class="dim">/ 300</span></span>
+            </div>
+            <div class="hud-progress-gauge">
+              <div class="gauge-ring-wrap">
+                <svg viewBox="0 0 36 36" class="gauge-ring">
+                  <path class="gauge-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                  <path id="gauge-fill" class="gauge-val" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                </svg>
+                <span id="hud-percent" class="gauge-text">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Scrubber -->
+          <div class="hud-scrubber-container">
+            <button id="autoplay-btn" class="hud-control-btn" title="Toggle Auto-Play Demo" aria-label="Auto play sequence">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="play-icon" id="play-icon">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </button>
+            <button id="speed-btn" class="hud-speed-btn" title="Click to cycle playback speed (Active: 0.75x)" aria-label="Playback Speed">
+              0.75x
+            </button>
+            <div class="timeline-bar-wrapper" id="timeline-scrubber" title="Click or drag to scrub frames">
+              <div class="timeline-ticks">
+                <span class="tick" style="left: 0%;"></span>
+                <span class="tick" style="left: 25%;"></span>
+                <span class="tick" style="left: 50%;"></span>
+                <span class="tick" style="left: 75%;"></span>
+                <span class="tick" style="left: 100%;"></span>
+              </div>
+              <div class="timeline-track">
+                <div id="timeline-fill" class="timeline-fill"></div>
+                <div id="timeline-thumb" class="timeline-thumb"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hud-right">
+            <div class="scroll-instruction" id="scroll-hint">
+              <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+              </div>
+              <span class="scroll-hint-text">SCROLL TO TRANSFORM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Tribute Intro & Quick Metrics -->
+    <section id="tribute-intro" class="vault-section tribute-intro-section" aria-label="Tribute Story Intro">
+      <div class="vault-container">
+        
+        <div class="tribute-header-grid">
+          <div class="tribute-text-col">
+            <div class="vault-badge-pill">
+              <span class="material-symbols-outlined badge-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              <span class="badge-accent">Kumuda &times; Omana</span>
+              <span class="badge-separator"></span>
+              <span class="badge-meta">2020 &rarr; Forever &bull; Birthday Tribute</span>
+            </div>
+            <h2 class="tribute-main-title">
+              From a Hair Pull to <span class="tribute-title-accent">Forever</span>
+            </h2>
+            <p class="tribute-main-lead">
+              One random hair pull started a friendship that survived school, exams, teachers, competitions, distance, and way too much complaining. &#128514;&#10084;&#65039;
+            </p>
+          </div>
+
+          <!-- Omana's Birthday Note Mini Vault Card -->
+          <div class="mini-vault-card">
+            <div class="mini-vault-watermark">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">cake</span>
+            </div>
+            <div class="mini-vault-meta">
+              <span class="material-symbols-outlined mini-vault-icon">cake</span>
+              <span>A Note from Omana &bull; Birthday Edition</span>
+            </div>
+            <blockquote class="mini-vault-quote">
+              &ldquo;Who knew that plucking my hair from the second bench in 2020 would gift me my favorite person for life? Happy Birthday, Kumuda!&rdquo;
+            </blockquote>
+            <div class="mini-vault-footer">
+              <span class="vault-tag">2020 &rarr; Forever</span>
+              <span class="vault-status">Soul Sisters</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Metrics Ribbon -->
+        <div class="metrics-ribbon-grid">
+          <div class="metric-ribbon-card">
+            <div class="metric-icon-wrap primary">
+              <span class="material-symbols-outlined">calendar_today</span>
+            </div>
+            <div class="metric-meta">
+              <span class="metric-number">2020</span>
+              <span class="metric-caption">Year It Began</span>
+            </div>
+          </div>
+
+          <div class="metric-ribbon-card">
+            <div class="metric-icon-wrap gold">
+              <span class="material-symbols-outlined">badge</span>
+            </div>
+            <div class="metric-meta">
+              <span class="metric-number">3 Years</span>
+              <span class="metric-caption">Class Monitors &#128081;</span>
+            </div>
+          </div>
+
+          <div class="metric-ribbon-card">
+            <div class="metric-icon-wrap emerald">
+              <span class="material-symbols-outlined">diversity_1</span>
+            </div>
+            <div class="metric-meta">
+              <span class="metric-number">The Four</span>
+              <span class="metric-caption">Kumuda, Omana, Daanvi, Druthi</span>
+            </div>
+          </div>
+
+          <div class="metric-ribbon-card">
+            <div class="metric-icon-wrap rose">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">flight</span>
+            </div>
+            <div class="metric-meta">
+              <span class="metric-number">Bangalore &#9992;&#65039;</span>
+              <span class="metric-caption">Distance Means Nothing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Main Lifeline Pulse Timeline -->
+    <section id="timeline-journey" class="vault-section timeline-stream-section" aria-label="Friendship Lifeline Journey">
+      <div class="vault-container relative">
+
+        <div class="timeline-section-header">
+          <div class="vault-badge-pill">
+            <span class="material-symbols-outlined badge-icon">timeline</span>
+            <span>CHRONICLES OF US</span>
+          </div>
+          <h2 class="timeline-section-title">The Unbreakable Lifeline Journey</h2>
+          <p class="timeline-section-sub">From second-bench mischief to hospital wards and lifelong sisterhood.</p>
+        </div>
+
+        <!-- Lifeline EKG Track Vector -->
+        <div class="timeline-ekg-line" aria-hidden="true"></div>
+
+        <!-- TIMELINE CHAPTER 1: 2020 -->
+        <div class="timeline-chapter-row" data-year="2020">
+          <div class="timeline-node">
+            <div class="node-circle">
+              <span class="material-symbols-outlined">edit_note</span>
+            </div>
+            <span class="node-label">2020</span>
+          </div>
+
+          <!-- Narrative Card -->
+          <article class="timeline-card left-card">
+            <div class="card-header">
+              <div class="card-badge">
+                <span class="material-symbols-outlined icon-amber">face_6</span>
+                <span>Chapter I &bull; It Started With My Hair &#128514;</span>
+              </div>
+              <span class="mobile-year-pill">2020</span>
+            </div>
+            <h3 class="card-title">First Bench, Second Bench &amp; A Surprise Hair Pull</h3>
+            <p class="card-text">
+              We met in 2020, after COVID. I was sitting on the first bench and Kumuda was sitting right behind me on the second bench. Then one completely unexpected thing happened &mdash; she plucked my hair. &#128514; And somehow, that tiny mischievous moment became the beginning of one of the most special friendships of my life.
+            </p>
+            <div class="card-callout">
+              <div class="callout-header">
+                <span class="material-symbols-outlined icon-gold">sentiment_very_satisfied</span>
+                <span>Classroom Confession &bull; The 2020 Post-Lockdown Origin</span>
+              </div>
+              <p class="callout-quote">
+                &ldquo;One sudden tug on my ponytail from the bench behind. I turned around annoyed, she flashed her mischievous grin, and history was made right then and there.&rdquo;
+              </p>
+            </div>
+            <div class="card-actions">
+              <div class="reaction-group">
+                <button class="reaction-btn" data-count="240" type="button" aria-label="Love this memory">
+                  <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  <span class="count-display">240</span> Loved
+                </button>
+                <span class="action-tag">
+                  <span class="material-symbols-outlined text-sm">content_cut</span> Hair Pull Legacy
+                </span>
+              </div>
+              <span class="card-sub-info">First Bench &times; Second Bench</span>
+            </div>
+          </article>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="timeline-polaroid right-polaroid">
+            <div class="polaroid-card rotate-right">
+              <div class="polaroid-pin">
+                <span class="material-symbols-outlined">push_pin</span>
+              </div>
+              <div class="polaroid-img-wrap">
+                <img src="images/chapter1_kumuda.jpg" alt="Dr. Kumuda N.V - The Journey Began" class="polaroid-img" loading="lazy">
+                <span class="polaroid-stamp">Dr. Kumuda N.V &bull; The Healer</span>
+              </div>
+              <div class="polaroid-caption">
+                <p>&ldquo;From classroom dreams to the sacred white coat.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE CHAPTER 2: 2021 -->
+        <div class="timeline-chapter-row reverse-row" data-year="2021">
+          <div class="timeline-node">
+            <div class="node-circle">
+              <span class="material-symbols-outlined">auto_stories</span>
+            </div>
+            <span class="node-label">2021</span>
+          </div>
+
+          <!-- Narrative Card -->
+          <article class="timeline-card right-card">
+            <div class="card-header">
+              <div class="card-badge">
+                <span class="material-symbols-outlined icon-amber">groups</span>
+                <span>Chapter II &bull; The Four of Us</span>
+              </div>
+              <span class="mobile-year-pill">2021</span>
+            </div>
+            <h3 class="card-title">Kumuda &bull; Omana &bull; Daanvi &bull; Druthi</h3>
+            <p class="card-text">
+              That was our gang. And honestly, our entire class probably had mixed feelings about us. &#128514; We had one special talent: complaining about everyone. And somehow, Kumuda and I became class monitors for THREE YEARS. Three years of watching everyone, reporting everything, taking our monitor duties way too seriously, and creating endless memories.
+            </p>
+            <div class="card-callout">
+              <div class="callout-header">
+                <span class="card-bold-label">The Monitor Duo &amp; The Legendary Four</span>
+                <span class="badge-gold-pill">3 Years in Power &#128081;</span>
+              </div>
+              <p class="callout-quote">
+                &ldquo;Taking names on the blackboard, scolding everyone with full authority, complaining non-stop, and then bursting out laughing the minute the teacher walked out!&rdquo;
+              </p>
+            </div>
+            <div class="card-actions">
+              <div class="reaction-group">
+                <button class="reaction-btn" data-count="312" type="button" aria-label="Gang pride">
+                  <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  <span class="count-display">312</span> Gang Pride
+                </button>
+                <span class="action-tag">
+                  <span class="material-symbols-outlined text-sm">assignment_ind</span> Class Monitors
+                </span>
+              </div>
+              <span class="card-sub-info">The Four Inseparable</span>
+            </div>
+          </article>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="timeline-polaroid left-polaroid">
+            <div class="polaroid-card rotate-left">
+              <div class="polaroid-pin">
+                <span class="material-symbols-outlined">military_tech</span>
+              </div>
+              <div class="polaroid-img-wrap">
+                <img src="images/chapter2_four_of_us.jpg" alt="Kumuda, Omana, Daanvi & Druthi - The Four of Us" class="polaroid-img" loading="lazy">
+                <span class="polaroid-stamp">The Four of Us &bull; 2021 Gang</span>
+              </div>
+              <div class="polaroid-caption">
+                <p>&ldquo;Kumuda, Omana, Daanvi &amp; Druthi &bull; Forever our unbeatable squad.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE CHAPTER 3: 2022 -->
+        <div class="timeline-chapter-row" data-year="2022">
+          <div class="timeline-node">
+            <div class="node-circle">
+              <span class="material-symbols-outlined">celebration</span>
+            </div>
+            <span class="node-label">2022</span>
+          </div>
+
+          <!-- Narrative Card -->
+          <article class="timeline-card left-card">
+            <div class="card-header">
+              <div class="card-badge">
+                <span class="material-symbols-outlined icon-amber">forum</span>
+                <span>Chapter III &bull; &ldquo;Let's Sit Together and Study.&rdquo;</span>
+              </div>
+              <span class="mobile-year-pill">2022</span>
+            </div>
+            <h3 class="card-title">5 Mins Later: Talking. 10 Mins Later: Still Talking. &#128514;</h3>
+            <p class="card-text">
+              During tests and exams, we would make a serious plan to sit together and study. But somehow... 5 minutes later: talking. 10 minutes later: still talking. Eventually: zero studying, maximum conversation. &#128514; Every teacher knew us so well that they would sometimes say my name when they meant Kumuda and Kumuda's name when they meant me. At that point, even our teachers knew we were basically a package deal.
+            </p>
+            <div class="card-callout">
+              <div class="callout-header">
+                <span class="material-symbols-outlined icon-gold">record_voice_over</span>
+                <span>Teacher Confusions &bull; A Certified Package Deal</span>
+              </div>
+              <p class="callout-quote">
+                &ldquo;&lsquo;Kumuda&mdash;wait, Omana!&rsquo; Even our teachers gave up trying to address us as separate entities. If one of us was guilty, both of us stood up!&rdquo;
+              </p>
+            </div>
+            <div class="card-actions">
+              <div class="reaction-group">
+                <button class="reaction-btn" data-count="480" type="button" aria-label="Pure truth">
+                  <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  <span class="count-display">480</span> Pure Truth
+                </button>
+                <span class="action-tag">
+                  <span class="material-symbols-outlined text-sm">sentiment_very_satisfied</span> Zero Studying Done
+                </span>
+              </div>
+              <span class="card-sub-info">The Package Deal</span>
+            </div>
+          </article>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="timeline-polaroid right-polaroid">
+            <div class="polaroid-card rotate-right">
+              <div class="polaroid-pin">
+                <span class="material-symbols-outlined">grade</span>
+              </div>
+              <div class="polaroid-img-wrap">
+                <img src="images/kumuda_omana_besties.jpg" alt="Kumuda and Omana - 5 Mins Later Talking, 10 Mins Later Still Talking" class="polaroid-img" loading="lazy">
+                <span class="polaroid-stamp">Study Table &bull; 5 Mins Later &hellip; Still Talking! &#128514;</span>
+              </div>
+              <div class="polaroid-caption">
+                <p>&ldquo;Zero studying, maximum conversation &bull; Kumuda &amp; Omana&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE CHAPTER 4: 2022-2023 -->
+        <div class="timeline-chapter-row reverse-row" data-year="2022–2023">
+          <div class="timeline-node">
+            <div class="node-circle">
+              <span class="material-symbols-outlined">stethoscope</span>
+            </div>
+            <span class="node-label">2022–23</span>
+          </div>
+
+          <!-- Narrative Card -->
+          <article class="timeline-card right-card">
+            <div class="card-header">
+              <div class="card-badge">
+                <span class="material-symbols-outlined icon-amber">emoji_events</span>
+                <span>Chapter IV &bull; Partners in Everything &#127942;</span>
+              </div>
+              <span class="mobile-year-pill">2022–23</span>
+            </div>
+            <h3 class="card-title">Competitions, Wins &amp; Causing Trouble Together</h3>
+            <p class="card-text">
+              We participated in competitions together, worked together, won together, and celebrated together. Whether it was studying, competing, complaining, laughing, or getting into trouble, we somehow did everything together.
+            </p>
+            <div class="card-callout">
+              <div class="callout-header">
+                <span class="card-bold-label">Unstoppable Duo</span>
+                <span class="badge-gold-pill">All In, Always</span>
+              </div>
+              <p class="callout-quote">
+                &ldquo;If there was a trophy to win or trouble to get into, you could bet Kumuda and Omana were at the very front of the line.&rdquo;
+              </p>
+            </div>
+            <div class="card-actions">
+              <div class="reaction-group">
+                <button class="reaction-btn" data-count="560" type="button" aria-label="Winners">
+                  <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  <span class="count-display">560</span> Winners
+                </button>
+                <span class="action-tag">
+                  <span class="material-symbols-outlined text-sm">trophy</span> Trophy Chasers
+                </span>
+              </div>
+              <span class="card-sub-info">Team Kumuda &times; Omana</span>
+            </div>
+          </article>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="timeline-polaroid left-polaroid">
+            <div class="polaroid-card rotate-left">
+              <div class="polaroid-pin">
+                <span class="material-symbols-outlined">workspace_premium</span>
+              </div>
+              <div class="polaroid-img-wrap">
+                <img src="images/chapter4_family_pride.jpg" alt="Dr. Kumuda with her proud parents" class="polaroid-img" loading="lazy">
+                <span class="polaroid-stamp">Family Pride &bull; The Milestone</span>
+              </div>
+              <div class="polaroid-caption">
+                <p>&ldquo;The moment of pure pride &bull; Dr. Kumuda and her greatest pillars of strength.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE CHAPTER 5: 2023 -->
+        <div class="timeline-chapter-row" data-year="2023">
+          <div class="timeline-node">
+            <div class="node-circle">
+              <span class="material-symbols-outlined">shield_person</span>
+            </div>
+            <span class="node-label">2023</span>
+          </div>
+
+          <!-- Narrative Card -->
+          <article class="timeline-card left-card">
+            <div class="card-header">
+              <div class="card-badge">
+                <span class="material-symbols-outlined icon-amber">flight_takeoff</span>
+                <span>Chapter V &bull; Our International Comedy Career &#128514;</span>
+              </div>
+              <span class="mobile-year-pill">2023</span>
+            </div>
+            <h3 class="card-title">The Legendary School Trip &amp; 5-Minute Good Behavior</h3>
+            <p class="card-text">
+              Then came our school trip. Did we behave normally? Absolutely not. We made jokes about the foreigners, did many naughty things, laughed at everything, and obviously got scolded by our teacher. We behaved for approximately five minutes... and then went right back to being ourselves. &#128514;
+            </p>
+            <div class="card-callout">
+              <div class="callout-header">
+                <span class="card-bold-label">Teacher's Stern Warning</span>
+                <span class="badge-gold-pill">Expired in 300 Seconds</span>
+              </div>
+              <p class="callout-quote">
+                &ldquo;&lsquo;Be serious for once!&rsquo; ... We looked at each other, bit our lips to hold back the giggles, and exploded into laughter the second sir looked away.&rdquo;
+              </p>
+            </div>
+            <div class="card-actions">
+              <div class="reaction-group">
+                <button class="reaction-btn" data-count="690" type="button" aria-label="Pure chaos">
+                  <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  <span class="count-display">690</span> Pure Chaos
+                </button>
+                <span class="action-tag">
+                  <span class="material-symbols-outlined text-sm">mood_bad</span> Scolded &amp; Proud
+                </span>
+              </div>
+              <span class="card-sub-info">School Trip 2023</span>
+            </div>
+          </article>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="timeline-polaroid right-polaroid">
+            <div class="polaroid-card rotate-right">
+              <div class="polaroid-pin">
+                <span class="material-symbols-outlined">stars</span>
+              </div>
+              <div class="polaroid-img-wrap">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8muRwkGlH9HBWD-GMo-nFcqqPSV3nbwtOdXFWJ1t4NZAnIr35N0xo7-OTwAfXUxfqP003fAOUVREpAa7M1s33WgDVMZmT9rADM9sQn2DTlVrCuLQobP3_-OUH2jlfa5LYMknI4_xwGAfuO9KGDZgVHwVjeMNE9qGZBuGsYg-mAYIqzUvg1cmcclWewnV4zUyiPf9z8Lu8yng5X3TN8in56j0wXI60hIXgU8kgGzA" alt="School Trip Mischief" class="polaroid-img" loading="lazy">
+                <span class="polaroid-stamp">School Trip &bull; Mischief Archives</span>
+              </div>
+              <div class="polaroid-caption">
+                <p>&ldquo;Behaved for 5 minutes, then back to chaos.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE CHAPTER 6: PRESENT DAY & FOREVER -->
+        <div class="timeline-chapter-row reverse-row" data-year="2024 & FOREVER">
+          <div class="timeline-node node-highlight">
+            <div class="node-circle gold-circle">
+              <span class="material-symbols-outlined">healing</span>
+            </div>
+            <span class="node-label highlight-label">2024 &amp; FOREVER</span>
+          </div>
+
+          <!-- Narrative Card -->
+          <article class="timeline-card right-card present-card">
+            <div class="card-header">
+              <div class="card-badge gold-badge">
+                <span class="material-symbols-outlined icon-gold" style="font-variation-settings: 'FILL' 1;">cake</span>
+                <span>Chapter VI &bull; Then Came 11th Standard &#128148;</span>
+              </div>
+              <span class="mobile-year-pill present-pill">PRESENT</span>
+            </div>
+            <h3 class="card-title">Bangalore Distance &amp; Happy Birthday Kumuda! &#127881;</h3>
+            <p class="card-text">
+              Then Kumuda moved to Bangalore. Suddenly, my second-bench partner wasn't sitting behind me anymore. I really, really missed her. I used to look at our old photos again and again, remembering all those ordinary school days that had somehow become some of the most precious memories of my life. Distance couldn't dim what began with a hair pull. Happy Birthday Kumuda!
+            </p>
+            <div class="card-callout gold-callout">
+              <div class="callout-header">
+                <span class="material-symbols-outlined icon-gold">cake</span>
+                <span class="callout-gold-title">Omana's Birthday Wish for Kumuda</span>
+              </div>
+              <p class="callout-quote">
+                &ldquo;Even though you're miles away in Bangalore now, no one can ever pull my hair or fill my days with laughter the way you did. You will always be my number one. Happy Birthday bestie! &#10084;&#65039;&#127874;&rdquo;
+              </p>
+            </div>
+            <div class="card-actions">
+              <div class="reaction-group">
+                <button class="reaction-btn primary-reaction" data-count="2024" type="button" aria-label="Infinite love">
+                  <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  <span class="count-display">2,024</span> Infinite Love
+                </button>
+                <span class="action-tag gold-tag">
+                  <span class="material-symbols-outlined text-sm">cake</span> Happy Birthday!
+                </span>
+              </div>
+              <span class="card-sub-info font-bold text-gold">Forever Kumuda &amp; Omana</span>
+            </div>
+          </article>
+
+          <!-- Polaroid Photo Frame -->
+          <div class="timeline-polaroid left-polaroid">
+            <div class="polaroid-card rotate-left">
+              <div class="polaroid-pin">
+                <span class="material-symbols-outlined text-gold">favorite</span>
+              </div>
+              <div class="polaroid-img-wrap">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ikEHtp4YOvkYOfXCy7jeSsOQXipgDbj31HZyGGkpmYEVCtC4LBfqwyrTQqPp1JU0U8oABnEI7vkl89KXSuvZkNpgNsB4zOZNt2Lr-nZqMTXU_Wdhmql0PaMjlZ-4eZQonf8O7WikmCBtbjQWS2-wB6zXxxlCNhkXARnVGMT1TVUfi-t4drlZvzWFZVzYnqlTSMvRXSy5Ga-lozHd8gyv0SJib0u5ePBnwAj0pI" alt="Bangalore & Future Doctor" class="polaroid-img" loading="lazy">
+                <span class="polaroid-stamp">Bangalore &#9992;&#65039; &bull; Distance Means Nothing</span>
+              </div>
+              <div class="polaroid-caption">
+                <p>&ldquo;Distance means nothing when the bond is forever.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Golden Stethoscope Divider Accent -->
+    <div class="stethoscope-divider-wrap" aria-hidden="true">
+      <div class="divider-line left-line"></div>
+      <div class="divider-badge">
+        <span class="material-symbols-outlined badge-icon">favorite</span>
+        <span class="badge-title">THE KUMUDA &times; OMANA FRIENDSHIP VAULT</span>
+        <span class="material-symbols-outlined badge-icon">cake</span>
+      </div>
+      <div class="divider-line right-line"></div>
+    </div>
+
+    <!-- SECTION: Photo Upload & Keepsake Contribution Studio -->
+    <section id="upload-memory-vault" class="vault-section upload-studio-section" aria-label="Upload Photo and Thoughts Studio">
+      <div class="vault-container">
+
+        <div class="studio-section-header">
+          <div class="vault-badge-pill">
+            <span class="material-symbols-outlined badge-icon">add_photo_alternate</span>
+            <span>KEEPSAKE PHOTO STUDIO</span>
+          </div>
+          <h2 class="studio-section-title">Upload a Photo &amp; Share Your Thoughts</h2>
+          <p class="studio-section-sub">
+            Add a personal polaroid snapshot with Kumuda along with your favorite thoughts, secrets, or memories to pin forever on the Keepsake Wall.
+          </p>
+        </div>
+
+        <!-- Studio Grid: Form on Left, Live Polaroid Preview on Right -->
+        <div class="upload-studio-grid">
+          
+          <!-- Left: Upload Form Card -->
+          <div class="studio-form-card">
+            <div class="card-head-badge">
+              <span class="material-symbols-outlined text-gold">auto_fix_high</span>
+              <span>CREATE NEW POLAROID KEEPSAKE</span>
+            </div>
+
+            <form id="photoUploadForm" class="photo-upload-form">
+              
+              <!-- Drag and Drop Image Box -->
+              <div class="upload-dropzone" id="photoDropzone" role="button" tabindex="0" title="Click or drop a photo here">
+                <input type="file" id="photoFileInput" accept="image/*" class="sr-only">
+                
+                <div class="dropzone-idle" id="dropzoneIdle">
+                  <div class="dropzone-icon-circle">
+                    <span class="material-symbols-outlined">cloud_upload</span>
+                  </div>
+                  <div class="dropzone-texts">
+                    <p class="dropzone-title">Click to choose photo or drag &amp; drop here</p>
+                    <p class="dropzone-hint">Supports high-res JPG, PNG, WEBP &bull; Camera photos welcome</p>
+                  </div>
+                </div>
+
+                <div class="dropzone-active-preview hidden" id="dropzonePreview">
+                  <img id="dropzoneThumb" src="" alt="Thumbnail Preview" class="dropzone-thumb">
+                  <div class="dropzone-overlay-actions">
+                    <button type="button" class="dropzone-change-btn" id="changePhotoBtn">
+                      <span class="material-symbols-outlined text-sm">cached</span> Change Photo
+                    </button>
+                    <button type="button" class="dropzone-remove-btn" id="removePhotoBtn" title="Remove photo">
+                      <span class="material-symbols-outlined text-sm">close</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Author / Name & Tag Row -->
+              <div class="form-row">
+                <div class="form-group flex-1">
+                  <label class="form-label" for="photoAuthor">Your Name &amp; Relation</label>
+                  <input class="form-input" id="photoAuthor" type="text" placeholder="e.g. Omana &bull; Best Friend" required>
+                </div>
+                <div class="form-group flex-1">
+                  <label class="form-label" for="photoCategory">Memory Era / Tag</label>
+                  <select class="form-select" id="photoCategory">
+                    <option value="Study &amp; Nonstop Talking">5 Mins Later &hellip; Still Talking (2022)</option>
+                    <option value="First Bench Days">First Bench Days (2020)</option>
+                    <option value="Class Monitor Era">Class Monitor Era (2021)</option>
+                    <option value="School Trip Shenanigans">School Trip Shenanigans (2023)</option>
+                    <option value="Doctor &amp; White Coat Dreams">Doctor &amp; White Coat Dreams</option>
+                    <option value="Bangalore Days &amp; Forever">Bangalore Days &amp; Forever</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Thoughts & Caption Textarea -->
+              <div class="form-group">
+                <label class="form-label" for="photoThoughts">Your Thoughts, Story or Caption</label>
+                <textarea class="form-textarea" id="photoThoughts" rows="3" placeholder="Write what was happening in this photo, the laughs you shared, or your message to Kumuda..." required></textarea>
+              </div>
+
+              <!-- Choose Keepsake Sticker / Stamp -->
+              <div class="form-group">
+                <label class="form-label">Choose Keepsake Stamp Sticker</label>
+                <div class="sticker-selector-row" id="stickerSelector">
+                  <button type="button" class="sticker-chip active" data-sticker="❤️ Soul Sisters">❤️ Soul Sisters</button>
+                  <button type="button" class="sticker-chip" data-sticker="👑 In Power">👑 In Power</button>
+                  <button type="button" class="sticker-chip" data-sticker="😂 Pure Chaos">😂 Pure Chaos</button>
+                  <button type="button" class="sticker-chip" data-sticker="🩺 Dr. Bestie">🩺 Dr. Bestie</button>
+                  <button type="button" class="sticker-chip" data-sticker="✨ Unstoppable">✨ Unstoppable</button>
+                  <button type="button" class="sticker-chip" data-sticker="🎂 Birthday Love">🎂 Birthday Love</button>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="studio-form-footer">
+                <div class="form-privacy-note">
+                  <span class="material-symbols-outlined text-gold text-base">verified</span>
+                  <span>Will be preserved in Kumuda's Memory Wall</span>
+                </div>
+                <button type="submit" class="submit-memory-btn" id="submitMemoryBtn">
+                  <span class="material-symbols-outlined">add_photo_alternate</span>
+                  <span>Pin to Keepsake Wall</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Live Real-Time Polaroid Preview -->
+          <div class="studio-preview-col">
+            <div class="preview-badge-row">
+              <span class="pulsing-live-dot"></span>
+              <span class="preview-badge-text">LIVE KEEPSAKE PREVIEW</span>
+            </div>
+
+            <div class="live-polaroid-stage">
+              <div class="polaroid-card live-preview-card" id="livePolaroidCard">
+                <div class="polaroid-pin">
+                  <span class="material-symbols-outlined text-gold" id="previewPinIcon">push_pin</span>
+                </div>
+                
+                <div class="polaroid-img-wrap preview-img-wrap" id="previewImgWrap">
+                  <img src="images/kumuda_omana_besties.jpg" alt="Preview Photo" class="polaroid-img" id="previewImgElement">
+                  <span class="polaroid-stamp" id="previewStampBadge">❤️ Soul Sisters</span>
+                </div>
+
+                <div class="polaroid-caption preview-caption">
+                  <p class="preview-caption-text" id="previewCaptionText">
+                    &ldquo;Zero studying, maximum conversation &bull; Kumuda &amp; Omana&rdquo;
+                  </p>
+                  <div class="preview-caption-author">
+                    <span id="previewAuthorText">Omana &bull; Best Friend</span>
+                    <span class="preview-tag-pill" id="previewTagPill">Study &amp; Nonstop Talking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sub-Section: The Community Polaroid Wall -->
+        <div class="polaroids-gallery-wall" id="community-gallery">
+          <div class="gallery-wall-header">
+            <div class="wall-header-left">
+              <span class="material-symbols-outlined text-gold text-2xl">photo_library</span>
+              <div>
+                <h3 class="gallery-wall-title">The Living Keepsake Polaroid Wall</h3>
+                <p class="gallery-wall-sub">Cherished moments preserved by Kumuda's closest friends &amp; family.</p>
+              </div>
+            </div>
+            <div class="gallery-wall-right">
+              <span class="wall-count-pill" id="wall-count-pill">4 Keepsakes Pinned</span>
+            </div>
+          </div>
+
+          <!-- Polaroids Grid -->
+          <div class="polaroids-wall-grid" id="polaroidsContainer">
+            
+            <!-- Default Card 1: Kumuda & Omana (The user uploaded photo!) -->
+            <div class="wall-polaroid-item">
+              <div class="polaroid-card rotate-right">
+                <div class="polaroid-pin">
+                  <span class="material-symbols-outlined text-gold">push_pin</span>
+                </div>
+                <div class="polaroid-img-wrap">
+                  <img src="images/kumuda_omana_besties.jpg" alt="Kumuda and Omana" class="polaroid-img" loading="lazy">
+                  <span class="polaroid-stamp">❤️ Soul Sisters</span>
+                </div>
+                <div class="polaroid-caption">
+                  <p>&ldquo;5 minutes later talking, 10 minutes later still talking. Zero studying, maximum love!&rdquo;</p>
+                  <div class="polaroid-author-bar">
+                    <span class="polaroid-author">Omana (First Bench Partner)</span>
+                    <button class="reaction-btn" data-count="999" type="button" aria-label="Love this photo">
+                      <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                      <span class="count-display">999</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Default Card 2: Classroom Days -->
+            <div class="wall-polaroid-item">
+              <div class="polaroid-card rotate-left">
+                <div class="polaroid-pin">
+                  <span class="material-symbols-outlined">grade</span>
+                </div>
+                <div class="polaroid-img-wrap">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwMaQNQ7_kiSvoC58giXxfmLat3yAk8or1ASN_a1HgYUcdu7FTYaCfYx6VhWY8kdlyXDvJ91NwBr1zNS1QNwu0Bn62bvWumsF_B9LAK0LMEmsGzb_WPhbTa4AFL60vhVWbtyfKITJiLNOJvQGrZJnSFRmbaFHEi4_IGci98wbax_u3qaiOd02Ipg4Y5KQ5W1la_nFlAyKk6VdkrPKZ8eBBeru6WnhoLyaMyAiZklE" alt="Classroom Days" class="polaroid-img" loading="lazy">
+                  <span class="polaroid-stamp">👑 In Power</span>
+                </div>
+                <div class="polaroid-caption">
+                  <p>&ldquo;Where it all began with a mischievous hair pull! Still the best day ever.&rdquo;</p>
+                  <div class="polaroid-author-bar">
+                    <span class="polaroid-author">Daanvi (The Gang)</span>
+                    <button class="reaction-btn" data-count="380" type="button" aria-label="Love this photo">
+                      <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                      <span class="count-display">380</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Default Card 3: School Trip -->
+            <div class="wall-polaroid-item">
+              <div class="polaroid-card rotate-right">
+                <div class="polaroid-pin">
+                  <span class="material-symbols-outlined">stars</span>
+                </div>
+                <div class="polaroid-img-wrap">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8muRwkGlH9HBWD-GMo-nFcqqPSV3nbwtOdXFWJ1t4NZAnIr35N0xo7-OTwAfXUxfqP003fAOUVREpAa7M1s33WgDVMZmT9rADM9sQn2DTlVrCuLQobP3_-OUH2jlfa5LYMknI4_xwGAfuO9KGDZgVHwVjeMNE9qGZBuGsYg-mAYIqzUvg1cmcclWewnV4zUyiPf9z8Lu8yng5X3TN8in56j0wXI60hIXgU8kgGzA" alt="School Trip" class="polaroid-img" loading="lazy">
+                  <span class="polaroid-stamp">😂 Pure Chaos</span>
+                </div>
+                <div class="polaroid-caption">
+                  <p>&ldquo;Behaved for 5 minutes then went right back to our crazy laughs. Happy Birthday Kumuda!&rdquo;</p>
+                  <div class="polaroid-author-bar">
+                    <span class="polaroid-author">Druthi (The Gang)</span>
+                    <button class="reaction-btn" data-count="540" type="button" aria-label="Love this photo">
+                      <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                      <span class="count-display">540</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Default Card 4: Doctor Milestone -->
+            <div class="wall-polaroid-item">
+              <div class="polaroid-card rotate-left">
+                <div class="polaroid-pin">
+                  <span class="material-symbols-outlined text-gold">favorite</span>
+                </div>
+                <div class="polaroid-img-wrap">
+                  <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ikEHtp4YOvkYOfXCy7jeSsOQXipgDbj31HZyGGkpmYEVCtC4LBfqwyrTQqPp1JU0U8oABnEI7vkl89KXSuvZkNpgNsB4zOZNt2Lr-nZqMTXU_Wdhmql0PaMjlZ-4eZQonf8O7WikmCBtbjQWS2-wB6zXxxlCNhkXARnVGMT1TVUfi-t4drlZvzWFZVzYnqlTSMvRXSy5Ga-lozHd8gyv0SJib0u5ePBnwAj0pI" alt="Dr Kumuda" class="polaroid-img" loading="lazy">
+                  <span class="polaroid-stamp">🩺 Dr. Bestie</span>
+                </div>
+                <div class="polaroid-caption">
+                  <p>&ldquo;To the girl with the dream in 2020 who is now the doctor safeguarding lives! Proud forever.&rdquo;</p>
+                  <div class="polaroid-author-bar">
+                    <span class="polaroid-author">Omana &bull; Forever &amp; Always</span>
+                    <button class="reaction-btn" data-count="1280" type="button" aria-label="Love this photo">
+                      <span class="material-symbols-outlined btn-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                      <span class="count-display">1,280</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Interactive Keepsake Guestbook & Live Scrapbook Slips -->
+    <section id="friendship-vault" class="vault-section guestbook-section" aria-label="Keepsake Memory Vault and Guestbook">
+      <div class="vault-container">
+        
+        <div class="guestbook-glass-card">
+          <div class="guestbook-grid">
+            
+            <!-- Left Column: Letter / Birthday Wish Form -->
+            <div class="guestbook-form-col">
+              <div class="form-title-badge">
+                <span class="material-symbols-outlined">cake</span>
+                <span>CELEBRATE KUMUDA'S BIRTHDAY</span>
+              </div>
+              <h3 class="form-main-heading">
+                Leave a Birthday Wish for <span class="accent-gold italic">Kumuda</span>
+              </h3>
+              <p class="form-lead-desc">
+                Were you there during the first bench days or our class monitor reign? Share your favorite memory or birthday greeting below to be bound in Kumuda's digital memory book!
+              </p>
+
+              <form id="tributeForm" class="tribute-form">
+                <div class="form-row">
+                  <div class="form-group flex-1">
+                    <label class="form-label" for="contributorName">Your Name &amp; Relation</label>
+                    <input class="form-input" id="contributorName" type="text" placeholder="e.g. Daanvi &bull; From The Gang" required>
+                  </div>
+                  <div class="form-group flex-1">
+                    <label class="form-label" for="milestoneTag">Associated Memory</label>
+                    <select class="form-select" id="milestoneTag">
+                      <option value="First Bench Days">First Bench Days (2020)</option>
+                      <option value="Class Monitor Era">Class Monitor Era (2021)</option>
+                      <option value="Zero Studying Sessions">Zero Studying Sessions (2022)</option>
+                      <option value="School Trip Shenanigans">School Trip Shenanigans (2023)</option>
+                      <option value="Bangalore Days">Bangalore Days (Present &amp; Beyond)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="contributorMessage">Your Message or Memory</label>
+                  <textarea class="form-textarea" id="contributorMessage" rows="4" placeholder="Write your warmest birthday wish or favorite memory with Kumuda..." required></textarea>
+                </div>
+
+                <div class="form-footer">
+                  <div class="form-privacy-note">
+                    <span class="material-symbols-outlined text-gold text-base">lock</span>
+                    <span>Permanently bound in Kumuda's memory album</span>
+                  </div>
+                  <button type="submit" class="submit-wish-btn">
+                    <span>Send Birthday Wish</span>
+                    <span class="material-symbols-outlined text-sm">send</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right Column: Live Keepsake Scrapbook Slips -->
+            <div class="guestbook-slips-col">
+              <div class="slips-header">
+                <div class="slips-header-left">
+                  <span class="material-symbols-outlined text-gold">auto_stories</span>
+                  <span class="slips-title">Keepsake Scrapbook Slips</span>
+                </div>
+                <span class="slips-counter-badge" id="slips-count-badge">12 Fresh Entries</span>
+              </div>
+
+              <div class="slips-scroll-container" id="notesContainer">
+                
+                <!-- Entry 1: Omana -->
+                <div class="scrapbook-slip-card pinned-highlight">
+                  <div class="slip-header">
+                    <span class="slip-author">Omana (Your First Bench Partner)</span>
+                    <span class="slip-tag gold">First Bench Days</span>
+                  </div>
+                  <p class="slip-body">
+                    &ldquo;I still remember looking back when you pulled my hair in 2020! Thank you for 4 years of non-stop laughs, 3 years of classroom monitoring madness, and being my favorite human. Happy Birthday Kumuda!&rdquo;
+                  </p>
+                  <div class="slip-footer">
+                    <span class="slip-time">Pinned with eternal love</span>
+                    <span class="material-symbols-outlined text-rose" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  </div>
+                </div>
+
+                <!-- Entry 2: Daanvi -->
+                <div class="scrapbook-slip-card">
+                  <div class="slip-header">
+                    <span class="slip-author">Daanvi (The Gang)</span>
+                    <span class="slip-tag">Class Monitor Era</span>
+                  </div>
+                  <p class="slip-body">
+                    &ldquo;Nobody could complain about the class like the two of you! The legendary Four miss you so much. Have the happiest birthday in Bangalore, Kumuda!&rdquo;
+                  </p>
+                  <div class="slip-footer">
+                    <span class="slip-time">Pinned 1 hour ago</span>
+                    <span class="material-symbols-outlined text-rose" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  </div>
+                </div>
+
+                <!-- Entry 3: Druthi -->
+                <div class="scrapbook-slip-card">
+                  <div class="slip-header">
+                    <span class="slip-author">Druthi (The Gang)</span>
+                    <span class="slip-tag">School Trip Shenanigans</span>
+                  </div>
+                  <p class="slip-body">
+                    &ldquo;Remember behaving for exactly five minutes on that school trip before going crazy again? The best memories ever! Sending all my love on your special day!&rdquo;
+                  </p>
+                  <div class="slip-footer">
+                    <span class="slip-time">Pinned yesterday</span>
+                    <span class="material-symbols-outlined text-rose" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Comprehensive Tribute Footer -->
+  <footer class="vault-footer">
+    <div class="vault-container">
+      <div class="footer-top-row">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="material-symbols-outlined footer-icon">celebration</span>
+            <span class="footer-brand-title">Dr. Milestone Vault</span>
+          </div>
+          <p class="footer-desc">
+            Commemorating an unshakeable bond forged in 8th grade corridors and crowned in hospital wards. To the girl who dreamt of the white coat&mdash;and the doctor who wears it today.
+          </p>
+        </div>
+
+        <nav class="footer-links-col" aria-label="Footer links">
+          <a href="#hero-section" class="footer-link">Transformation</a>
+          <a href="#tribute-intro" class="footer-link">The Story</a>
+          <a href="#timeline-journey" class="footer-link">Our Lifeline Track</a>
+          <a href="#friendship-vault" class="footer-link">Memory Vault &amp; Wishes</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="footer-copy">
+          &copy; Celebrating Dr. Bestie &bull; Created with lifelong love, pride, and infinite admiration.
+        </p>
+        <div class="footer-signature">
+          <span class="material-symbols-outlined icon-heart" style="font-variation-settings: 'FILL' 1;">favorite</span>
+          <span>From Homework to Healing Hands &bull; Kumuda &times; Omana</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
